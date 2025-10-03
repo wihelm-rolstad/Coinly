@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Button?>
+
+
+
+<StackPane xmlns="http://javafx.com/javafx/21.0.2"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="ui.LoginController"
+           style="-fx-background-color: #333333ff;">
+    
+    <VBox spacing="10" alignment="CENTER">
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </padding>
+
+        <Label text="Coinly" 
+               style="-fx-text-fill: white; -fx-font-size: 20px;"/>
+
+        <TextField fx:id="emailField" 
+                   promptText="Enter your email"
+                   prefWidth="200"
+                   maxWidth="200"/>
+
+        <PasswordField fx:id="passwordField"
+                       promptText="Enter your password"
+                       prefWidth="200"
+                       maxWidth="200"/>
+
+        <Label fx:id="errorLabel" text="Wrong username or password"
+               style="-fx-text-fill: red;"
+               visible="false"/>
+
+        <Button fx:id="loginButton"
+                text="Login"
+                onAction="#handleLogin"
+                prefWidth="200"/>
+
+        <Label fx:id="signupLabel"
+               text="Don't have an account? Sign up"
+               style="-fx-text-fill: white;"/>
+    </VBox>
+</StackPane>

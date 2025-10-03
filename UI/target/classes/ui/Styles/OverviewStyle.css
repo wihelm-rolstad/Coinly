@@ -1,0 +1,12 @@
+.StackPane {
+    -fx-background-color: #ffffff;
+}
+
+#incomeBox{
+    -fx-background-color: #000000;
+    -fx-text-fill: white; /* White text */
+    -fx-padding: 20px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 20, 0.1, 7, 7);
+}
