@@ -1,5 +1,7 @@
 # Coinly
 
+[GitHub Repo](https://github.com/wihelm-rolstad/Coinly)
+
 Private personal project to try and make an application all by myself
 
 [About](#about)
