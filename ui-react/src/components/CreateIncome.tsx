@@ -1,39 +1,21 @@
 import { useState } from "react";
 import TextField from "@mui/material/TextField";
+import { addIncome } from "../services/IncomeService";
 
 const CreateIncome = ({ onAdd }: { onAdd: (income: any) => void }) => {
   const [incomeName, setIncomeName] = useState("");
   const [value, setValue] = useState<number | "">("");
 
   const handleSubmit = async () => {
-    const newIncome = {
-      incomeName,
-      value: Number(value),
-    };
-
-    console.log("Sending income:", newIncome); // 👈 debug log
-
+    const newIncome = { incomeName, value: Number(value) };
     try {
-        const response = await fetch("http://localhost:8080/api/income", {
-            method: "POST",
-            headers: {
-            "Content-Type": "application/json",
-            },
-            body: JSON.stringify(newIncome),
-        });
-
-        if (!response.ok) {
-            throw new Error("Failed to save income");
-        }
-
-        const savedIncome = await response.json();
-        onAdd(savedIncome);
-
-        setIncomeName("");
-        setValue("");
-        } catch (err) {
-        console.error("Error adding income:", err);
-        }
+      const savedIncome = await addIncome(newIncome);
+      onAdd(savedIncome);
+      setIncomeName("");
+      setValue("");
+    } catch (err) {
+      console.error("Error adding income:", err);
+    }
   };
 
   return (

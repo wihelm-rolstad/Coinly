@@ -88,3 +88,30 @@ button:focus {
     padding: 30px;
     margin-left: auto;
 }
+
+
+#create-income{
+    background-color: rgb(206, 206, 206);
+    border-radius: 20px;
+    padding: 20px;
+    width: 50vw;
+    height: 300px;
+    margin-top: 20px;
+    color:white;
+    gap: 20px;
+    display: flex;
+    flex-direction:column;
+}
+
+#all-income{
+    background-color: rgb(206, 206, 206);
+    border-radius: 20px;
+    padding: 20px;
+    width: 50vw;
+    height: 300px;
+    margin-top: 20px;
+    color:white;
+    gap: 20px;
+    display: flex;
+    flex-direction:column;
+}

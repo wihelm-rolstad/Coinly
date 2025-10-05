@@ -8,14 +8,16 @@
     <groupId>com.example</groupId>
     <artifactId>coinly-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging> <!-- 🔹 important: parent must be type "pom" -->
+    <packaging>pom</packaging> <!-- parent must be "pom" -->
 
     <modules>
         <module>Core</module>
-        <module>UI</module>
+        <!-- The React frontend isn't built with Maven, so only include it if you want Maven to "see" the folder -->
+        <!-- <module>ui-react</module> -->
     </modules>
 
     <properties>
+        <java.version>17</java.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -24,6 +26,7 @@
     <build>
         <pluginManagement>
             <plugins>
+                <!-- Optional: ensures tests run properly in submodules -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>

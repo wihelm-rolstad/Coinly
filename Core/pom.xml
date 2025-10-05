@@ -5,21 +5,46 @@
 
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- ✅ This makes Core inherit Spring Boot defaults -->
     <parent>
-        <groupId>com.example</groupId>
-        <artifactId>coinly-parent</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.2</version>
+        <relativePath/> 
     </parent>
 
+    <groupId>com.example</groupId> <!-- add groupId for clarity -->
     <artifactId>core</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
 
     <dependencies>
-        <!-- JUnit 5 for Core tests -->
+        <!-- Spring Boot Web Starter (REST controllers, Tomcat, Jackson JSON) -->
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>5.10.2</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- ✅ You don’t need to add jackson-databind explicitly,
+             it’s already included in spring-boot-starter-web -->
+
+        <!-- Spring Boot Testing (includes JUnit 5) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>core.CoreApplication</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
