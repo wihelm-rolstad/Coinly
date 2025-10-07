@@ -1,6 +1,9 @@
 import { useState } from "react";
 import TextField from "@mui/material/TextField";
 import { addIncome } from "../services/IncomeService";
+import "../style/CreateIncome.css";
+
+
 
 const CreateIncome = ({ onAdd }: { onAdd: (income: any) => void }) => {
   const [incomeName, setIncomeName] = useState("");
@@ -18,6 +21,7 @@ const CreateIncome = ({ onAdd }: { onAdd: (income: any) => void }) => {
     }
   };
 
+  
   return (
     <div id="create-income">
       <h3>Add New Income</h3>

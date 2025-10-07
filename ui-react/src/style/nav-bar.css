@@ -1,0 +1,60 @@
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+
+
+    background-color: rgb(168, 185, 235);
+    height: 50px;
+    border-radius: 20px;
+    align-items: center;
+    
+    top: 10px;
+    padding: 16px;
+    gap: 10px;
+    width: 60vw;
+    overflow-x: hidden;
+    color: white;
+}
+
+#logout {
+    border: solid 2px rgb(246, 59, 59);
+    color: red;
+    background-color: transparent;
+    margin-left: auto;
+}
+
+.nav-bar button{
+    background: none;
+    border: none;
+    outline: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 10px;             /* remove all browser default styles */
+    padding: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-bar button:not(#logout){
+    color: white;
+    background-color: rgb(126, 126, 202);
+}
+
+.nav-bar button:hover:not(#logout){
+    background-color: rgb(120, 153, 228);
+    transform: scale(1.1);
+    outline: none !important;
+}
+
+.nav-bar button:active{
+    transform: scale(0.95);
+    background-color: #8294e4;
+}
+
+#logout:hover{
+    transform: scale(1.1)
+}

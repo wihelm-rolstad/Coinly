@@ -1,18 +1,18 @@
+import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
-import Card from "../components/Card";
-import CreateIncome from "../components/CreateIncome";
+import IncomesCard from "../components/IncomesCard";
+import ExpensesCard from "../components/ExpensesCard";
+import "../style/Overview.css";
 
 const Overview = () => {
   return (
     <>
-      <NavBar />
-      <h2>Overview</h2>
-      <div style={{ display: "flex", gap: "20px" }}>
-        <Card title="Balance" content="$5400" />
-        <Card title="Income" content="$7500" />
-        <Card title="Expenses" content="$2000" />
-      </div>
-      <CreateIncome onAdd={(income) => console.log("Added income:", income)}/>
+    <NavBar />
+      <h2 id="messagelabel">USER's Overview</h2>
+      <div id="overview-container">
+          <IncomesCard incomes={[]} />
+          <ExpensesCard expenses={[]} />
+        </div>
     </>
   );
 };
