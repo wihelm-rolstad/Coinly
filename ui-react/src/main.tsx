@@ -6,6 +6,7 @@ import Overview from "./pages/Overview.tsx";
 import IncomesPage from "./pages/IncomesPage";
 import ExpensesPage from "./pages/ExpensesPage";
 import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -15,6 +16,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/incomesPage" element={<IncomesPage />} />
         <Route path="/expensesPage" element={<ExpensesPage />} />
         <Route path="/loginPage" element={<LoginPage />} />
+        <Route path="/registerPage" element={<RegisterPage />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

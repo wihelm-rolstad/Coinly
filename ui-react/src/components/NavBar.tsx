@@ -15,7 +15,7 @@ const NavBar = () => {
           <button>Expenses</button>
         </Link>
       <button id="profile-button">Profile</button>
-       <Link to="/loginPage">
+       <Link to="/loginPage" id="logout-link">
         <button id="logout">Log Out</button>
       </Link>
     </div>

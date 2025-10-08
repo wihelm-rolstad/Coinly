@@ -32,6 +32,9 @@ const LoginPage = () => {
         <Link to="/" >
             <button id="login-button">logIn</button>
         </Link>
+        <Link to="/registerPage">
+        <p>Don't have an account? Register a new account</p>
+        </Link>
         </div>
         </>
     )

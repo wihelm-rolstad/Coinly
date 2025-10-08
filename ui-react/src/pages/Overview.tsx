@@ -12,6 +12,7 @@ const Overview = () => {
       <div id="overview-container">
           <IncomesCard incomes={[]} />
           <ExpensesCard expenses={[]} />
+          <p></p>
         </div>
     </>
   );

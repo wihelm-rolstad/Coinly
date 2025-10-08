@@ -7,26 +7,34 @@
 
 
     background-color: rgb(168, 185, 235);
-    height: 50px;
     border-radius: 20px;
     align-items: center;
     
     top: 10px;
-    padding: 16px;
+    padding: 0px 14px;
     gap: 10px;
     width: 60vw;
+    overflow-x: hidden;
     overflow-x: hidden;
     color: white;
 }
 
 #logout {
+    all: unset; /* remove everything from the generic button */
     border: solid 2px rgb(246, 59, 59);
     color: red;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 10px;
     background-color: transparent;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#logout-link{
     margin-left: auto;
 }
 
-.nav-bar button{
+.nav-bar button:not(#logout){
     background: none;
     border: none;
     outline: none;

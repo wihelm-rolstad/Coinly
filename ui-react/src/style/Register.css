@@ -1,0 +1,7 @@
+#register-form{
+    display: flex;
+    flex-direction: column;   /* stack vertically */
+    gap: 15px;                /* space between inputs */
+    width: 300px;             /* optional: control form width */
+    margin: 0 auto; 
+}
